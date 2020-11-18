@@ -11,4 +11,10 @@ public class restcontroller {
     return "Hello world Security";
 }
 
+    @GetMapping("/admin")
+    public String admin(){ return "Hello World from Admin";}
+
+    @GetMapping("/user")
+    public String user(){ return "Hello World from USER";}
+
 }

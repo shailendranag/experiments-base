@@ -16,16 +16,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-                .ldapAuthentication()
-                .userDnPatterns("uid={0},ou=people")
-                .groupSearchBase("ou=groups")
-                .contextSource()
-                .url("ldap://localhost:8399/dc=springframework,dc=org")
-                .and()
-                .passwordCompare()
-                .passwordEncoder(new BCryptPasswordEncoder())
-                .passwordAttribute("userPassword");
+
     }
 }
 
